@@ -119,12 +119,15 @@ async function handleSubmit(e) {
 
   let notes = form.querySelector('textarea[name="notes"]').value.trim();
   if (isTaskOneSentence(taskId)) {
-    // Basic guard: discourage multiple sentences.
-    const sentenceMarkers = (notes.match(/[.!?]/g) || []).length;
-    if (notes.includes('\n') || sentenceMarkers > 1) {
-      setStatus(form, 'Solo una oración (una sola frase).', 'bad');
-      toast('Solo una oración', 'bad');
-      return;
+    // Recommendation only: warn if it looks like multiple sentences/lines.
+    // Avoid false positives from URLs like https://www.youtube.com/...
+    const withoutUrls = notes.replace(/https?:\/\/\S+/gi, '');
+    const sentenceEndings = (withoutUrls.match(/\.(?=\s|$)/g) || []).length
+      + (withoutUrls.match(/[!?]+(?=\s|$)/g) || []).length;
+    const nonEmptyLines = notes.split(/\n+/).filter((l) => l.trim().length > 0).length;
+
+    if (sentenceEndings > 1 || nonEmptyLines > 1) {
+      toast('Tip: esta tarea sugiere una sola frase (igual se envía).', 'info');
     }
   }
 
