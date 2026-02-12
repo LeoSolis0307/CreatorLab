@@ -1,0 +1,9 @@
+node_modules/
+uploads/
+data/submissions.json
+public/img/uploads/
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env

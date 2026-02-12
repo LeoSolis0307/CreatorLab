@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TareasLab — Entrega Futurista</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body data-student-name="leo_solis">
+  <div class="bg">
+    <div class="grid"></div>
+    <div class="glow"></div>
+  </div>
+
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="title">TareasLab</div>
+        <div class="subtitle">Entrega rápida • Curso • Semanas</div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div class="pill">Solo texto (por ahora)</div>
+      <div class="pill">Local: <span class="mono">localhost</span></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>SEMANA 1 — CREATOR LAB<br/>Entrega tus tareas.</h1>
+      <p>
+        Por ahora las entregas son solo de texto. Se verán automáticamente en cada apartado.
+      </p>
+
+      <div class="row">
+        <div class="hint" aria-label="Identidad">
+          <div class="hintTitle">Usuario</div>
+          <div class="hintBody">Discord: <span class="mono">leo_solis</span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="tabs" aria-label="Semanas">
+      <button class="tab active" type="button" data-week-tab="1">Semana 1</button>
+    </nav>
+
+    <section class="weekPanel" data-week-panel="1" aria-label="Semana 1">
+      <details class="task" data-task-id="1" data-allow-multiple="false" data-one-sentence="true" open>
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 1 — Definir tu nicho (obligatorio)</div>
+          </div>
+          <div class="badge">01</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>¿Sobre qué vas a crear contenido?</li>
+              <li>¿Para quién es?</li>
+              <li>¿Qué problema o interés cubre?</li>
+            </ul>
+            <div class="qHint">Escribe en una sola frase.</div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="1" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="5" placeholder="Ej: Creo contenido de ___ para ___ para ayudarles a ___." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 1">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="1">Editar</button>
+              </div>
+              <div class="feedList" data-feed="1"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="task" data-task-id="2" data-allow-multiple="false">
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 2 — Crear / Optimizar tus canales</div>
+          </div>
+          <div class="badge">02</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>¿Ya tienes canales o vas a crearlos?</li>
+              <li>YouTube (obligatorio): nombre, foto y bio (¿de qué es y para quién?)</li>
+              <li>1 red secundaria (TikTok/IG/X/Facebook): nombre, foto y bio</li>
+              <li>¿Qué ajustarás para que se entienda rápido?</li>
+            </ul>
+            <div class="qHint">Nombre simple y claro (no perfecto).</div>
+
+            <div class="attach">
+              <div class="attachTitle">Imagen (si aplica)</div>
+              <div class="attachBody">
+                Coloca tu imagen en <span class="mono">public/img</span> y enlázala aquí.
+              </div>
+              <div class="thumbs">
+                <a class="thumb" href="/img/placeholder.svg" data-lightbox="/img/placeholder.svg" download>
+                  <img src="/img/placeholder.svg" alt="Ejemplo" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="2" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="7" placeholder="Pon: links (si ya existen), nombre actual, qué dice tu bio y qué vas a ajustar." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 2">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="2">Editar</button>
+              </div>
+              <div class="feedList" data-feed="2"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="task" data-task-id="3" data-allow-multiple="false">
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 3 — Ideas de contenido (10)</div>
+          </div>
+          <div class="badge">03</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>Escribe 10 ideas simples (sentido común + experiencia).</li>
+              <li>Formato sugerido: “Título — de qué tratará”.</li>
+            </ul>
+            <div class="qHint">No investigues de más: directo y simple.</div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="3" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="10" placeholder="1) ...\n2) ...\n3) ..." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 3">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="3">Editar</button>
+              </div>
+              <div class="feedList" data-feed="3"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="task" data-task-id="4" data-allow-multiple="false">
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 4 — Frecuencia real</div>
+          </div>
+          <div class="badge">04</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>¿Cuántos videos por semana sí puedes sostener?</li>
+              <li>¿En qué formato: short / largo?</li>
+            </ul>
+            <div class="qHint">No pongas lo ideal, pon lo real.</div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="4" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="5" placeholder="Ej: 3 shorts/semana + 1 largo cada 2 semanas..." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 4">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="4">Editar</button>
+              </div>
+              <div class="feedList" data-feed="4"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="task" data-task-id="5" data-allow-multiple="false">
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 5 — Contenido ya publicado (si aplica)</div>
+          </div>
+          <div class="badge">05</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>Si ya publicas contenido: pega links (1 a 3) de piezas recientes.</li>
+              <li>Si no aplica: escribe “No aplica”.</li>
+            </ul>
+            <div class="qHint">No importa el resultado, solo que existan.</div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="5" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="6" placeholder="Link 1: ...\nLink 2: ...\nLink 3: ..." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 5">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="5">Editar</button>
+              </div>
+              <div class="feedList" data-feed="5"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="task" data-task-id="6" data-allow-multiple="false" data-one-sentence="true">
+        <summary class="taskSummary">
+          <div>
+            <div class="kicker">Semana 1</div>
+            <div class="taskTitle">Tarea 6 — Bloqueo principal</div>
+          </div>
+          <div class="badge">06</div>
+        </summary>
+
+        <div class="taskBody">
+          <div class="qBlock" aria-label="Preguntas">
+            <div class="qTitle">Preguntas</div>
+            <ul class="qList">
+              <li>En una línea: ¿qué es lo que más te ha frenado para crear contenido hasta hoy?</li>
+            </ul>
+            <div class="qHint">Esto es para destrabar, no para juzgar.</div>
+          </div>
+
+          <div class="aBlock" aria-label="Respuesta">
+            <div class="aTitle">Respuesta</div>
+            <form class="form" data-task-form>
+              <input type="hidden" name="taskId" value="6" />
+              <label class="field">
+                <span>Tu respuesta</span>
+                <textarea name="notes" rows="4" placeholder="Ej: me frena la pena / no sé qué decir / no tengo tiempo..." spellcheck="false"></textarea>
+              </label>
+              <label class="field">
+                <span>Adjuntar imágenes (opcional)</span>
+                <input name="images" type="file" accept="image/*" multiple />
+              </label>
+              <div class="savedImgs" data-saved-images></div>
+              <button class="btn" type="submit">Enviar respuesta</button>
+              <div class="status" aria-live="polite"></div>
+            </form>
+
+            <div class="feed" aria-label="Respuestas recientes Tarea 6">
+              <div class="feedHead">
+                <div class="feedTitle">Respuestas recientes</div>
+                    <div class="miniMuted">Tu respuesta</div>
+                <button class="linkBtn" type="button" data-edit="6">Editar</button>
+              </div>
+              <div class="feedList" data-feed="6"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightboxInner" role="dialog" aria-modal="true" aria-label="Vista previa">
+      <button class="lightboxClose" type="button" data-lightbox-close>Cerrar</button>
+      <a class="lightboxDownload" data-lightbox-download download>Descargar</a>
+      <img class="lightboxImg" data-lightbox-img alt="Vista previa" />
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
