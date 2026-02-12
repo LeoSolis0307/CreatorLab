@@ -49,7 +49,7 @@ function renderSavedImages(form, urls) {
   const box = getSavedImagesContainer(form);
   if (!box) return;
 
-  const items = (urls || []).filter((u) => typeof u === 'string' && u.startsWith('/img/'));
+  const items = (urls || []).filter((u) => typeof u === 'string' && (u.startsWith('/img/') || /^https?:\/\//i.test(u)));
   if (items.length === 0) {
     box.innerHTML = '';
     return;
@@ -69,11 +69,14 @@ function renderSavedImages(form, urls) {
     .join('');
 }
 
-async function uploadImages(files) {
+async function uploadImages(files, { weekId, taskId } = {}) {
   const list = Array.from(files || []);
   if (list.length === 0) return [];
 
   const fd = new FormData();
+  // Optional metadata so Vercel Blob can store files grouped by task.
+  if (weekId != null) fd.append('weekId', String(weekId));
+  if (taskId != null) fd.append('taskId', String(taskId));
   for (const f of list) fd.append('images', f);
 
   const res = await fetch('/api/upload-image', { method: 'POST', body: fd });
@@ -142,7 +145,7 @@ async function handleSubmit(e) {
 
   try {
     const uploaded = imageInput && imageInput.files && imageInput.files.length
-      ? await uploadImages(imageInput.files)
+      ? await uploadImages(imageInput.files, { weekId: activeWeekId, taskId })
       : [];
 
     const images = [...kept, ...uploaded];
