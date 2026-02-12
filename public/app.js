@@ -171,10 +171,13 @@ async function handleSubmit(e) {
     setStatus(form, 'Guardado ✅', 'ok');
     toast(`Tarea ${taskId} entregada`, 'ok');
 
-    await refreshTask(taskId);
-    if (!allowMultiple) {
-      lockForm(form);
+    try {
+      await refreshTask(taskId);
+    } catch {
+      // ignore
     }
+
+    if (!allowMultiple) lockForm(form);
   } catch (err) {
     const msg = (err && err.message) ? err.message : 'Error de red o servidor.';
     setStatus(form, msg, 'bad');
